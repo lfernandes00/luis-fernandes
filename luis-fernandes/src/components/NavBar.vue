@@ -1,38 +1,58 @@
 <template>
   <div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">About Me</a>
-      <a class="nav-item nav-link" href="#">Skills</a>
-      <a class="nav-item nav-link" href="#">Projects</a>
-    </div>
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-toggle id="toggle" target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item href="#">About Me</b-nav-item>
+          <b-nav-item href="#">Skills</b-nav-item>
+          <b-nav-item href="#">Projects</b-nav-item>
+        </b-navbar-nav>
+        <b-navbar-nav id="navRight">
+          <b-button id="talkBtn" type="submit">Talk to me</b-button>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
   </div>
-</nav>
-</div>
 </template>
 
 <script>
 export default {
-name:"NavBar"
-}
+  name: "NavBar",
+};
 </script>
 
 <style>
 nav {
-    min-height: 3.25rem;
-    background-image: linear-gradient(to bottom right, rgb(20, 30, 117), rgb(64, 81, 231));
+  min-height: 3.25rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(20, 30, 117),
+    rgb(64, 81, 231)
+  );
 }
-#navbarNavAltMarkup {
-    margin-left: 3.9rem;
-    margin-right: 3.9rem;
+#toggle {
+  margin-left: 1.5rem;
 }
-nav .navbar-nav .nav-item {
+#nav-collapse {
+  margin-left: 6.9rem;
+  margin-right: 6.9rem;
+  background-image: white;
+}
+nav .navbar-nav .nav-item a {
   color: white !important;
   font-weight: bold;
 }
-.nav-item.nav-item.nav-item a:hover {
-  color: black
+nav .navbar-nav .nav-item a:hover {
+  color: black !important;
 }
-
+#navRight {
+  margin-left: auto;
+}
+#talkBtn {
+  color: white;
+  background-color: rgb(29, 33, 68);
+  border: none;
+}
 </style>
