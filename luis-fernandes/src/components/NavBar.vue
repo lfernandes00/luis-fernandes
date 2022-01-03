@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar class="fixed-top" toggleable="lg" type="dark" variant="info">
       <b-navbar-toggle id="toggle" target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
@@ -10,7 +10,7 @@
           <b-nav-item href="#">Projects</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav id="navRight">
-          <b-button id="talkBtn" type="submit">Talk to me</b-button>
+          <b-button id="cvBtn" href="./assets/CV.pdf" target="_blank" type="submit">CV</b-button>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -27,9 +27,10 @@ export default {
 nav {
   min-height: 3.25rem;
   background-image: linear-gradient(
-    to bottom right,
-    rgb(20, 30, 117),
-    rgb(64, 81, 231)
+    to bottom ,
+    rgb(46, 175, 207),
+    rgb(27, 167, 202)
+    
   );
 }
 #toggle {
@@ -45,14 +46,14 @@ nav .navbar-nav .nav-item a {
   font-weight: bold;
 }
 nav .navbar-nav .nav-item a:hover {
-  color: black !important;
+  color: rgb(47, 50, 80) !important;
 }
 #navRight {
   margin-left: auto;
 }
-#talkBtn {
+#cvBtn {
   color: white;
-  background-color: rgb(29, 33, 68);
+  background-color: rgb(47, 50, 80);
   border: none;
 }
 </style>
